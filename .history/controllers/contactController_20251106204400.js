@@ -64,3 +64,10 @@ export const deleteContact = async (req, res) => {
   }
 };
 
+module.exports = {
+  getAllContacts,
+  getContactById,
+  createContact,
+  updateContact,
+  deleteContact,
+};

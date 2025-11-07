@@ -4,9 +4,7 @@ import cors from "cors";
 import connectDB from "./db/connect.js";
 import contactRoutes from "./routes/contactRoute.js";
 import swaggerUi from "swagger-ui-express";
-import fs from "fs";
-
-const swaggerDocument = JSON.parse(fs.readFileSync("./swagger.json", "utf-8"));
+import swaggerDocument from "./swagger.json" assert { type: "json" };
 
 dotenv.config();
 const app = express();
@@ -27,10 +25,10 @@ app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 app.get("/", (req, res) => {
   res.json({
     message: "Welcome to the Contacts API!",
-    documentationURL: "http://localhost:8080/api-docs"
+    documentationURL: "http://localhost:3000/api-docs"
   });
 });
 
 // Start server
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));

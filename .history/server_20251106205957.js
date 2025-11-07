@@ -27,10 +27,10 @@ app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 app.get("/", (req, res) => {
   res.json({
     message: "Welcome to the Contacts API!",
-    documentationURL: "http://localhost:8080/api-docs"
+    documentationURL: "http://localhost:3000/api-docs"
   });
 });
 
 // Start server
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));

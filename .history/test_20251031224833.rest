@@ -1,0 +1,8 @@
+### Get all contacts
+GET http://localhost:8080/contacts
+
+### Get one contact by ID
+GET http://localhost:8080/contacts/690323d3203e0362ea22a7ba
+
+### Get page through render
+GET https://cse341-web-services-qmi4.onrender.com/contacts
